@@ -1,5 +1,6 @@
 # mg_winter_castle_partii-Global-stripper
 mg_winter_castle_patrii global stripper
+This stripper is designed mainly for owners of Zombie Escape servers, for a stable game. All changes have been checked on the first version of the map, if you have the second version, then put this stripper at your own risk
 - All text messages have been translated to vscripts
 - Added trigger_hurt to the start room
 - Added support for players up to 64 pieces
@@ -11,3 +12,4 @@ mg_winter_castle_patrii global stripper
 - Added text messages, what you need to do to survive during boss attacks
 - Changed the position of some cameras during cutscenes
 - Added Russian language support
+- Some items will now be picked up automatically after the cutscene
