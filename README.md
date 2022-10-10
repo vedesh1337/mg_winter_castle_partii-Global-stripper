@@ -13,3 +13,4 @@ This stripper is designed mainly for owners of Zombie Escape servers, for a stab
 - Changed the position of some cameras during cutscenes
 - Added Russian language support
 - Some items will now be picked up automatically after the cutscene
+- The teleport point on the bridge in front of the boss has been changed
