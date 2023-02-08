@@ -8,17 +8,17 @@ function MapSpawn()
     EntFire("cmd", "Command", "mp_freezetime 0", 0.0, "");
     EntFire("cmd", "Command", "mp_roundtime 60", 0.0, "");
     EntFire("cmd", "Command", "sv_staminamax 0", 0.0, "");
-	EntFire("cmd", "Command", "sv_staminalandcost 0", 0.0, "");
-	EntFire("cmd", "Command", "sv_staminajumpcost 0", 0.0, "");
-	EntFire("cmd", "Command", "sv_staminarecoveryrate 0", 0.0, "");
-	EntFire("cmd", "Command", "sv_accelerate_use_weapon_speed 0", 0.0, "");
-	EntFire("cmd", "Command", "sv_airaccelerate 9999", 0.0, "");
+    EntFire("cmd", "Command", "sv_staminalandcost 0", 0.0, "");
+    EntFire("cmd", "Command", "sv_staminajumpcost 0", 0.0, "");
+    EntFire("cmd", "Command", "sv_staminarecoveryrate 0", 0.0, "");
+    EntFire("cmd", "Command", "sv_accelerate_use_weapon_speed 0", 0.0, "");
+    EntFire("cmd", "Command", "sv_airaccelerate 9999", 0.0, "");
     EntFire("cmd", "Command", "mp_warmup_end", 0.0, "");
     EntFire("cmd", "Command", "mp_startmoney 0", 0.0, "");
     EntFire("cmd", "Command", "mp_maxmoney 0", 0.0, "");
     EntFire("cmd", "Command", "sv_disable_radar 0", 0.0, "");
     EntFire("cmd", "Command", "mp_autokick 0", 0.0, "");
-    EntFire("cmd", "Command", "sv_infinite_ammo 2", 0.0, "");
+    EntFire("cmd", "Command", "sv_infinite_ammo 0", 0.0, "");
     EntFire("music_initcounter", "FireUser1", "", 0.0, "");
     EntFire("sprites_initcounter", "FireUser1", "", 0.0, "");
     EntFire("throne_room_laser", "TurnOn", "", 0.0, "");
@@ -82,6 +82,18 @@ function StartTextHud()
         }
         EntFireByHandle(self,"RunScriptCode","StartTextHud();",1.00,null,null);
     }
+}
+
+function GiveAmmo()
+{
+	pl <- null;
+	while(pl = Entities.FindByClassname(pl, "player"))
+	{
+	if(pl.GetTeam() == 3)
+	{
+		EntFire("give_ammo", "GiveAmmo", "null", 0.00, pl);
+	} 
+}
 }
 
 function SpawnButton()
